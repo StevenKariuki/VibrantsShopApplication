@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SignupApplication">
 
 
     <TextView
@@ -57,11 +59,22 @@
         android:hint="Confirm your password"
         android:inputType="textPassword"/>
 
+    <EditText
+        android:id="@+id/phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/confirm_password_edittext"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:hint="Enter phone number"
+        android:inputType="text"/>
+
     <Button
         android:id="@+id/signup_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/confirm_password_edittext"
+        android:layout_below="@id/phone_number"
         android:layout_marginTop="32dp"
         android:layout_centerHorizontal="true"
         android:text="Sign Up"/>

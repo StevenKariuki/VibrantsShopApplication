@@ -13,6 +13,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
+
+
+
 //        val signUpButton = findViewById<Button>(R.id.signup_button)
         val loginButton = findViewById<Button>(R.id.login_button)
 

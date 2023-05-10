@@ -9,7 +9,7 @@
         android:id="@+id/title_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="VI_BRANT'S SPORTS APP!"
+        android:text="VI_BRANT'S !"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
@@ -59,10 +59,11 @@
         android:id="@+id/signup_text"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
+        android:textStyle="italic"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/login_button"
         android:layout_centerHorizontal="true"
-        android:text="Don't have an account?" />
+        android:text="Don't have an account?Sign up" />
 
 <!--    <Button-->
 <!--        android:id="@+id/signup_button"-->
