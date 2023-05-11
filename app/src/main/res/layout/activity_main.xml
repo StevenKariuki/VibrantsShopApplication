@@ -52,6 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/password_edittext"
         android:layout_marginTop="20dp"
+
         android:layout_centerHorizontal="true"
         android:text="Log In"/>
 

@@ -4,15 +4,18 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+        val editUsername = findViewById<EditText>(R.id.username_edittext)
+        val editpassword = findViewById<EditText>(R.id.password_edittext)
 
 
 
@@ -20,9 +23,24 @@ class MainActivity : AppCompatActivity() {
         val loginButton = findViewById<Button>(R.id.login_button)
 
         loginButton.setOnClickListener {
-            Toast.makeText(this, "WELCOME BACK", Toast.LENGTH_SHORT).show()
-            val loginIntent = Intent(applicationContext, VibrantsPageApplication::class.java)
-            startActivity(loginIntent)
+
+            val payload = JSONObject()
+            payload.put("username",editUsername.text.toString())
+            payload.put("password", editpassword.text.toString())
+
+            val api = "http://stevenkariuki9.pythonanywhere.com/users"
+
+            val helper = ApiHelper(applicationContext)
+            helper.get(api,object :ApiHelper.CallBack{
+                override fun onSuccess(result: String?) {
+
+                    val loginIntent = Intent(applicationContext, VibrantsPageApplication::class.java)
+                    startActivity(loginIntent)
+
+                }
+            })
+
+
         }
 
 //        signUpButton.setOnClickListener {
