@@ -23,7 +23,9 @@ class MainActivity : AppCompatActivity() {
         val loginButton = findViewById<Button>(R.id.login_button)
 
         loginButton.setOnClickListener {
-
+            Toast.makeText(applicationContext, "WELCOME TO VI_BRANT'S", Toast.LENGTH_SHORT).show()
+            val intent = Intent(applicationContext, VibrantsPageApplication::class.java)
+            startActivity(intent)
             val payload = JSONObject()
             payload.put("username",editUsername.text.toString())
             payload.put("password", editpassword.text.toString())
